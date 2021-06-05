@@ -1,4 +1,7 @@
 class Book < ApplicationRecord
+	
+    is_impressionable
+	
 	belongs_to :user
 	has_many :favorites, dependent: :destroy
 	has_many :comments,  dependent: :destroy
@@ -25,5 +28,6 @@ class Book < ApplicationRecord
 			@book = Book.all
 		end
 	end
+
 
 end
