@@ -1,6 +1,7 @@
 class BooksController < ApplicationController
   before_action :correct_user, only: [:edit, :update]
-
+  impressionist :actions=>[:show]
+  
   def show
     @book = Book.find(params[:id])
     @user = @book.user
